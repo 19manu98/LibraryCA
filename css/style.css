@@ -1,0 +1,146 @@
+body{
+  margin = 0;
+  padding = 0;
+  background: url("../pictures/back.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+p{
+  text-decoration: none;
+  color: #fff;
+  transition: .5s ease; //specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+}
+
+p:hover{
+  color: #179b77;
+}
+
+.form{
+  background: rgba(38,12,12, 0.5);
+  padding: 4%;
+  max-width: 700px;
+  margin: 2% auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px #000;
+  transition: .5s ease;
+}
+
+.form:hover{
+  box-shadow: 0 0 40px 16px #000;
+}
+
+.logSig{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3% 0;
+}
+
+.logSig:after{
+  content: "";
+  display:table;
+  clear:both;
+}
+
+.logSig li p{
+  display: block;
+  text-decoration: none;
+  padding: 2%;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+  border-style: solid;
+  border-color: #179b77;
+}
+
+#log{
+  border-radius: 4px 0 0 4px ;
+  background:#179b77;
+}
+
+#sig{
+  border-radius: 0 4px 4px 0 ;
+}
+
+.logSig li p:hover{
+  background: #179b77;
+  color: #ffffff;
+}
+
+.tab-content > div:first-child{
+  display: none;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 2%;
+}
+
+label{
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+input{
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background: #000;
+  background-image: none;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0px;
+  transition: border-color .25s ease,box-shadow .25 ease;
+}
+
+.field-wrap{
+  position:relative;
+  margin-bottom: 5%;
+}
+
+.inLine:after{
+  content:"";
+  display: table;
+  clear:both;
+}
+
+.inLine > div{
+  float:left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.inLine > div:last-child{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  transition: .5s ease;
+}
+
+.button{
+  background:#179b77;
+  border: 1px solid #179b77;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 2%;
+  width:50%;
+  color:#fff;
+  margin:0 0 0 25%;
+
+}
