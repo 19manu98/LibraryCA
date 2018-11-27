@@ -9,4 +9,5 @@ function showsig(){
   document.getElementById("log").style.background="none";
   document.getElementById("Login").style.display="none";
   document.getElementById("signup").style.display="block";
+
 };

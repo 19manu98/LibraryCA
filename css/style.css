@@ -148,3 +148,8 @@ a{
 .error{
   color:red;
 }
+
+.errorform{
+  color:red;
+  text-align: left;
+}

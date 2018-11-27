@@ -1,0 +1,62 @@
+body{
+  margin = 0;
+  padding = 0;
+  background: url("../pictures/back.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+#main{
+  background: rgba(38,12,12, 0.7);
+  padding: 2%;
+  max-width: 90%;
+  height: 90%;
+  margin: 2% auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px #000;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 0 2%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #179b77;
+    border-radius: 4px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000;
+    transition: 0.7s ease;
+    border-radius: 50%;
+}
+.active {
+    background-color: #000;
+    border-radius: 50%;
+}

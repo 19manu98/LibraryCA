@@ -1,10 +1,18 @@
+<?php
+//if there is a session the user cannot loggin again (he has to log out)
+session_start();
+if (isset($_SESSION['user'])) {
+header("Location:php/mylibrary.php");
+}
+?>
 <html>
 <head>
   <title> Login/Sign-up Page</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="script/script.js"></script>
-  <?php include 'php/connection.php';?>
   <?php include 'php/register.php';?>
+  <?php include 'php/loggin.php';?>
+
 </head>
 <body>
 
@@ -18,8 +26,9 @@
     <div class="tab-content">
       <div id="signup">
         <h1>Register to our amazing library</h1>
+        <h3 class="errorform"><?php echo $UsenameEx;?></h3>
 
-        <form method="POST"
+        <form method="POST" id="myForm"
  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
           <div class="inLine">
@@ -73,7 +82,7 @@
 
             <div class="field-wrap">
               <label>
-                Telephone
+                Telephone (must be numeric and 7 digits long)
               </label>
               <span class="error"><?php echo $teleErr;?></span>
               <input type="text" name="tele" value="<?php echo htmlspecialchars($tele);?>"/>
@@ -81,7 +90,7 @@
 
             <div class="field-wrap">
               <label>
-                Mobile
+                Mobile (must be numeric and 10 digit long)
               </label>
               <span class="error"><?php echo $mobErr;?></span>
               <input type="text" name="mob" value="<?php echo htmlspecialchars($mob);?>"/>
@@ -94,7 +103,6 @@
               Username
             </label>
             <span class="error"><?php echo $UsernameErr;?></span>
-            <span class="error"><?php echo $UsernameErr;?></span>
             <input type="text" name="Username" value="<?php echo htmlspecialchars($Username);?>"/>
           </div>
 
@@ -102,17 +110,19 @@
             <label>
               Password
             </label>
-            <input type="password" name="pwd1"/>
+            <span class="error"><?php echo $pswErr;?></span>
+            <input type="password" name="psw" />
           </div>
 
           <div class="field-wrap">
             <label>
               Confirm Password
             </label>
-            <input type="password" name="pwd"/>
+            <span class="error"><?php echo $conpswErr;?></span>
+            <input type="password" name="conpsw"/>
           </div>
 
-          <button type="submit" class="button"/>Register</button>
+          <input type="submit" value="Register" name="Register" class="button"/>
 
         </form>
 
@@ -120,26 +130,29 @@
 
       <div id="Login">
         <h1>Welcome Back</h1>
+        <h3 class="errorform"><?php echo $LogginError?></h3>
 
-          <form action"" method="post">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
             <div class="field-wrap">
               <label>
                 Username
               </label>
-              <input type="text" />
+              <span class="error"><?php echo $lUsernameErr;?></span>
+              <input type="text" name="lUsername" value="<?php echo htmlspecialchars($lUsername);?>"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Password
               </label>
-              <input type="password" />
+              <span class="error"><?php echo $lpswErr;?></span>
+              <input type="password" name="lpsw" />
             </div>
 
             <p class="forgot"><a href="#">Forgot Password?</a></p>
 
-            <button type="submit" name="Submit" class="button"/>Log In</button>
+            <input type="submit" value="Log In" name="Loggin" class="button"/>
 
           </form>
 
