@@ -2,7 +2,7 @@
 //if there is a session the user cannot loggin again (he has to log out)
 session_start();
 if (isset($_SESSION['user'])) {
-header("Location:php/mylibrary.php");
+header("Location:php/search.php");
 }
 ?>
 <html>

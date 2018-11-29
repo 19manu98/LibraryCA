@@ -56,7 +56,59 @@ li a:hover {
     transition: 0.7s ease;
     border-radius: 50%;
 }
+
 .active {
     background-color: #000;
     border-radius: 50%;
+}
+
+.search{
+  margin:1% 25% 0 25%;
+  padding:1%;
+  border-radius: 4px;
+  background-color: #179b77;
+}
+
+
+label{
+  margin-left: 15%;
+  display: inline-block;
+  width: 15%;
+}
+
+input{
+  width:50% ;
+  margin-right: 2% ;
+}
+
+button{
+  margin-left: 35%;
+  width:12%;
+}
+
+.books{
+  margin: auto;
+  width: 90%;
+  background: #179b77;
+  height:55%;
+  text-align: center;
+  box-shadow: 0 4px 10px 4px #000;
+}
+th{
+  box-shadow: 0 4px 10px 4px #000;
+}
+tr{
+  box-shadow: 0 4px 10px 4px #000;
+}
+td{
+  box-shadow: 0 4px 10px 4px #000
+}
+
+.link{
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+.page{
+  color: #fff;
 }
